@@ -57,28 +57,32 @@
   @media(max-width:900px){.nav-right a.lnk{display:none}}
 
   /* HERO */
-  .hero{position:relative;background:var(--bg) url('hero_lijun.png') no-repeat;background-size:cover;background-position:72% center;min-height:600px;display:flex;align-items:center}
-  .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(238,241,245,.97) 0%,rgba(238,241,245,.9) 34%,rgba(238,241,245,.45) 58%,rgba(238,241,245,0) 80%)}
+  .hero{position:relative;background:var(--bg) url('hero_lijun.png') no-repeat;background-size:cover;background-position:78% center;min-height:478px;display:flex;align-items:center}
+  .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(238,241,245,.97) 0%,rgba(238,241,245,.93) 38%,rgba(238,241,245,.5) 60%,rgba(238,241,245,0) 82%)}
   .hero .wrap{width:100%}
-  .hero-inner{max-width:600px;padding:60px 0}
-  .hero .eyebrow{margin-bottom:14px}
-  .hero h1{font-size:56px;font-weight:900;line-height:1.26;color:var(--ink);margin-bottom:8px}
+  .hero-inner{max-width:600px;padding:34px 0}
+  .hero .eyebrow{margin-bottom:9px}
+  .hero h1{font-size:46px;font-weight:900;line-height:1.18;color:var(--ink);margin-bottom:6px}
   .hero h1 .g{color:var(--navy)}
-  .hero-promise{font-size:22px;color:var(--ink);margin:18px 0 10px;font-weight:700;line-height:1.6}
-  .hero-promise .g{color:var(--navy)}
-  .hero .quote{font-family:"Noto Serif TC";font-size:17px;color:var(--grey);margin:10px 0 26px;font-weight:500;line-height:1.7;font-style:italic}
-  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:12px}
-  .btn-lg{padding:17px 40px;font-size:18px}
-  .hero-free{display:inline-block;color:var(--blue);font-weight:600;font-size:15px;border-bottom:1px solid transparent;transition:.2s;margin-bottom:20px}
+  .hero .quote{font-family:"Noto Serif TC";font-size:16.5px;color:var(--grey);margin:8px 0 14px;font-weight:500;line-height:1.6;font-style:italic}
+  .hero-getlead{font-size:14px;color:var(--ink);font-weight:700;margin-bottom:8px}
+  .hero-gets{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:6px 18px;margin:0 0 18px}
+  .hero-gets li{position:relative;padding-left:23px;font-size:14px;color:var(--ink);font-weight:500;line-height:1.45}
+  .hero-gets li:before{content:"\2713";position:absolute;left:0;color:var(--blue);font-weight:700}
+  .hero-gets li b{color:var(--navy);font-weight:700}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+  .btn-lg{padding:15px 36px;font-size:17px}
+  .hero-free{display:inline-block;color:var(--blue);font-weight:600;font-size:14.5px;border-bottom:1px solid transparent;transition:.2s;margin-bottom:14px}
   .hero-free:hover{border-bottom-color:var(--blue)}
-  .hero-assure{display:flex;flex-wrap:wrap;gap:8px 20px;margin-bottom:22px}
-  .hero-assure span{font-size:13.5px;color:var(--steel);font-weight:500}
-  .hero-tags{font-size:14px;color:var(--steel);letter-spacing:1px}
+  .hero-assure{display:flex;flex-wrap:wrap;gap:6px 18px;margin-bottom:13px}
+  .hero-assure span{font-size:13px;color:var(--steel);font-weight:500}
+  .hero-tags{font-size:13.5px;color:var(--steel);letter-spacing:1px}
   .hero-tags b{color:var(--navy);font-weight:700}
   @media(max-width:900px){
-    .hero{min-height:auto;background-position:78% top;background-size:140%;padding-top:230px}
-    .hero:before{background:linear-gradient(180deg,rgba(238,241,245,.2) 0%,rgba(238,241,245,.92) 32%,var(--bg) 55%)}
-    .hero h1{font-size:38px}.hero-inner{padding:20px 0 50px}
+    .hero{min-height:auto;background-position:78% top;background-size:155%;padding-top:190px}
+    .hero:before{background:linear-gradient(180deg,rgba(238,241,245,.15) 0%,rgba(238,241,245,.93) 28%,var(--bg) 50%)}
+    .hero h1{font-size:35px}.hero-inner{padding:14px 0 42px}
+    .hero-gets{grid-template-columns:1fr}
   }
 
   /* TRAILER */
@@ -191,10 +195,13 @@
   .bt-price small{font-size:12px;color:var(--grey);font-weight:500}
 
   /* PLAYLIST */
-  .pl-grid{display:grid;grid-template-columns:1.45fr 1fr;gap:24px;margin-top:46px;align-items:start}
+  .pl-grid{display:grid;grid-template-columns:1.85fr 1fr;gap:22px;margin-top:46px;align-items:start}
   .pl-now{margin-top:12px;color:#eef2f7;font-size:15px;line-height:1.5}
   .tag-free{display:inline-block;background:var(--blue);color:#fff;font-size:12px;font-weight:700;padding:2px 10px;border-radius:999px;margin-right:8px;font-family:"Noto Sans TC"}
-  .pl-list{background:var(--dark2);border:1px solid var(--line-d);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
+  .pl-list{background:var(--dark2);border:1px solid var(--line-d);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;max-height:472px}
+  .pl-scroll{flex:1 1 auto;overflow-y:auto}
+  .pl-head{flex:0 0 auto}
+  .pl-cta{flex:0 0 auto}
   .pl-head{display:flex;justify-content:space-between;align-items:center;padding:15px 18px;font-family:"Noto Serif TC";font-weight:700;color:#fff;font-size:16px;border-bottom:1px solid var(--line-d)}
   .pl-head span{color:#9aa5b4;font-weight:400;font-size:13px}
   .pl-item{display:flex;gap:12px;align-items:center;padding:13px 18px;border-bottom:1px solid var(--line-d);color:#c2cbd8;font-size:14.5px;transition:.15s;text-decoration:none}
@@ -324,10 +331,16 @@
     <div class="hero-inner">
       <div class="eyebrow">一個人一生必學的一堂課</div>
       <h1>發現<span class="g">天賦</span><br>成就人生</h1>
-      <p class="hero-promise">7 堂課，幫你看清自己與孩子<span class="g">最該走的那條路</span>。</p>
-      <p class="quote">「這個世界本無庸才，庸才是用錯地方的人才。」</p>
+      <p class="quote">「這個世界本無庸才，庸才是用錯地方的人才。」幫你認清自己與孩子的天賦，選對方向。</p>
+      <p class="hero-getlead">訂閱會員，立即獲得：</p>
+      <ul class="hero-gets">
+        <li>完整影音課程，<b>每週持續更新</b></li>
+        <li>會員專屬<b>直播答疑</b></li>
+        <li>「發現天賦」<b>學友社群</b></li>
+        <li><b>才幹測評碼</b>·專業評估天賦（年訂閱）</li>
+      </ul>
       <div class="hero-cta">
-        <a class="btn btn-solid btn-lg" href="https://www.ganjingworld.com/channel/1hc7rhlp4nk1AedUtCDfBiqfs1v50c" target="_blank" rel="noopener">訂閱會員 · 看完整 7 堂課</a>
+        <a class="btn btn-solid btn-lg" href="https://www.ganjingworld.com/channel/1hc7rhlp4nk1AedUtCDfBiqfs1v50c" target="_blank" rel="noopener">訂閱會員 · 看完整課程</a>
       </div>
       <a class="hero-free" href="https://www.ganjingworld.com/@%E6%9D%8E%E5%86%9B%E8%AE%B2%E5%A0%82" target="_blank" rel="noopener">或先免費看第一課 →</a>
       <p class="hero-assure"><span>✓ 第一課免費試看</span><span>✓ 月費制隨時可取消</span><span>✓ 無長期綁約</span></p>
@@ -355,7 +368,7 @@
       <aside class="buy-card">
         <div class="ribbon">會員訂閱方案</div>
         <div class="bc-tier">
-          <div><div class="bt-name">月訂閱</div><div class="bt-desc">完整 7 堂課 · 直播 · 學友群</div></div>
+          <div><div class="bt-name">月訂閱</div><div class="bt-desc">完整課程 · 直播 · 學友群</div></div>
           <div class="bt-price">$19.99<small>/月</small></div>
         </div>
         <div class="bc-tier rec">
@@ -411,7 +424,7 @@
     <div class="center">
       <div class="eyebrow">旗艦課程</div>
       <h2 class="title">《發現天賦 <span class="g">成就人生</span>》</h2>
-      <p class="lead">一套源自企業實戰、為普通家庭降維的「識人之道」。共 7 堂課，第一課免費，加入會員看完整課程。</p>
+      <p class="lead">一套源自企業實戰、為普通家庭降維的「識人之道」。每週持續更新，第一課免費，加入會員看完整課程。</p>
     </div>
     <div class="pl-grid">
       <div class="pl-video">
@@ -423,7 +436,8 @@
         <p class="pl-now"><span class="tag-free">免費試看</span>第一課 · 為什麼「認清自己」是一生最重要的事</p>
       </div>
       <aside class="pl-list">
-        <div class="pl-head">課程章節 <span>7 堂課</span></div>
+        <div class="pl-head">課程章節 <span>每週更新</span></div>
+        <div class="pl-scroll">
         <div class="pl-item free"><span class="pl-no">01</span><span class="pl-t">為什麼「認清自己」是一生最重要的事<span class="pl-meta">正在播放 · 免費試看</span></span><span class="pl-ic">▶</span></div>
         <a class="pl-item" href="#pricing"><span class="pl-no">02</span><span class="pl-t">天賦是什麼：才幹的本質<span class="pl-meta">訂閱解鎖</span></span><span class="pl-ic">&#128274;</span></a>
         <a class="pl-item" href="#pricing"><span class="pl-no">03</span><span class="pl-t">如何發現自己的天賦<span class="pl-meta">訂閱解鎖</span></span><span class="pl-ic">&#128274;</span></a>
@@ -432,6 +446,7 @@
         <a class="pl-item" href="#pricing"><span class="pl-no">06</span><span class="pl-t">選對方向：升學與職涯的關鍵抉擇<span class="pl-meta">訂閱解鎖</span></span><span class="pl-ic">&#128274;</span></a>
         <a class="pl-item" href="#pricing"><span class="pl-no">07</span><span class="pl-t">才幹互補：組出你的核心班子<span class="pl-meta">訂閱解鎖</span></span><span class="pl-ic">&#128274;</span></a>
         <a class="pl-item" href="#pricing"><span class="pl-no">＋</span><span class="pl-t">會員專屬直播 · 報告點評<span class="pl-meta">訂閱解鎖</span></span><span class="pl-ic">&#128274;</span></a>
+        </div>
         <a class="btn btn-solid pl-cta" href="https://www.ganjingworld.com/channel/1hc7rhlp4nk1AedUtCDfBiqfs1v50c" target="_blank" rel="noopener">訂閱解鎖全部課程</a>
       </aside>
     </div>
@@ -618,7 +633,7 @@
         <div class="amt">$19.99<small> / 月</small></div>
         <p class="tagline">入門首選 · 完整課程</p>
         <ul>
-          <li>7 堂完整課程，隨時回看</li>
+          <li>完整影音課程，每週更新</li>
           <li>會員專屬直播，現場答疑</li>
           <li>加入「發現天賦學友群」</li>
           <li>直播精選測評報告點評</li>
@@ -681,7 +696,7 @@
       <details class="qa"><summary>第一課真的免費嗎？</summary><div class="a">是的。《發現天賦 成就人生》第一課在乾淨世界頻道免費試看，其餘六堂課與會員專屬直播需訂閱會員（US$19.99/月）後觀看。</div></details>
       <details class="qa"><summary>會員費怎麼計算？可以取消嗎？</summary><div class="a">會員為每月 US$19.99 的訂閱制，於乾淨世界平台訂閱。你可以隨時在平台帳戶中管理或取消訂閱。</div></details>
       <details class="qa"><summary>才幹測評是什麼？怎麼取得？</summary><div class="a">課程幫你建立識人方法的認知；才幹測評碼則針對個人，專業評估你的天賦與職業方向。完成<strong>年訂閱（US$168／年）</strong>即包含才幹測評碼與報告專家點評，不需另外購買。</div></details>
-      <details class="qa"><summary>月訂閱和年訂閱差在哪？</summary><div class="a">月訂閱（US$19.99／月）可看 7 堂完整課程、會員專屬直播與學友群；年訂閱（US$168／年）包含月訂閱的所有權益，再加贈才幹測評碼與專業評估天賦，適合想更進一步認清自己與孩子的人。兩者都在乾淨世界平台訂閱、可隨時取消。</div></details>
+      <details class="qa"><summary>月訂閱和年訂閱差在哪？</summary><div class="a">月訂閱（US$19.99／月）可看完整影音課程（每週更新）、會員專屬直播與學友群；年訂閱（US$168／年）包含月訂閱的所有權益，再加贈才幹測評碼與專業評估天賦，適合想更進一步認清自己與孩子的人。兩者都在乾淨世界平台訂閱、可隨時取消。</div></details>
       <details class="qa"><summary>測評能保證升學或就業結果嗎？</summary><div class="a">不能。測評與課程提供的是認清天賦的方法與職涯方向的專業參考，最終選擇與結果因人而異。我們協助你做出更有依據的決定，而非保證特定結果。</div></details>
     </div>
   </div>
