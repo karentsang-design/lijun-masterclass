@@ -311,6 +311,49 @@
   footer a{color:var(--blue-l)}
   footer .fl{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin:14px 0}
   .disc{font-size:12px;color:#5e6a7a;max-width:780px;margin:16px auto 0;line-height:1.7}
+
+  /* === Hero sub + 全站字體加大 === */
+  .hero-sub{font-size:18.5px;color:#3c4656;font-weight:400;line-height:1.75;margin:10px 0 16px}
+  .hero-sub b{color:var(--navy);font-weight:700}
+  body{font-size:17.5px}
+  .hero h1{font-size:52px}
+  .hero-getlead{font-size:15.5px}
+  .hero-gets li{font-size:15px}
+  .eyebrow{font-size:15px}
+  .nav-right a.lnk{font-size:16px}
+  h2.title{font-size:42px}
+  .lead{font-size:20px}
+  .trailer h2{font-size:34px}
+  .trailer .sub{font-size:17px}
+  .trust .n{font-size:36px}
+  .trust .l{font-size:15px}
+  .pain-card h3{font-size:23px}
+  .pain-card p{font-size:17px}
+  .pl-head{font-size:17px}
+  .pl-item{font-size:15.5px}
+  .pl-now{font-size:16px}
+  .master-grid p{font-size:17.5px}
+  .badge{font-size:14.5px}
+  .case-body h4{font-size:20px}
+  .case-report p{font-size:16px}
+  .case-lesson{font-size:15px}
+  .track h3{font-size:26px}
+  .track li{font-size:16.5px}
+  .vtes-body p{font-size:18px}
+  .plan h3{font-size:24px}
+  .plan li{font-size:16px}
+  .plan .tagline{font-size:15px}
+  .bt-name{font-size:17px}
+  .bt-price{font-size:24px}
+  .qa summary{font-size:18px}
+  .qa .a{font-size:17px}
+  .step h4{font-size:18px}
+  .step p{font-size:15.5px}
+  .final h2{font-size:44px}
+  .final p{font-size:20px}
+  .founding-banner{font-size:16px}
+  .price-foot{font-size:14px}
+  @media(max-width:900px){.hero h1{font-size:38px}}
 </style>
 </head>
 <body>
@@ -334,9 +377,9 @@
 <section class="hero">
   <div class="wrap">
     <div class="hero-inner">
-      <div class="eyebrow">一個人一生必學的一堂課</div>
+      <div class="eyebrow">李軍講堂 · 線上影音課程訂閱</div>
       <h1>發現<span class="g">天賦</span><br>成就人生</h1>
-      <p class="quote">「這個世界本無庸才，庸才是用錯地方的人才。」幫你認清自己與孩子的天賦，選對方向。</p>
+      <p class="hero-sub">資深人才鑑別師<b>李軍</b>的線上課——用 10 年企業實戰的「識人之道」，幫你看懂自己、孩子與身邊每個人的天賦。</p>
       <p class="hero-getlead">訂閱會員，立即獲得：</p>
       <ul class="hero-gets">
         <li>完整影音課程，<b>每週持續更新</b></li>
@@ -350,6 +393,42 @@
       <a class="hero-free" href="#trailer">↓ 先免費看第一課（站內試看）</a>
       <p class="hero-assure"><span>✓ 第一課免費試看</span><span>✓ 月費制隨時可取消</span><span>✓ 無長期綁約</span></p>
       <p class="hero-tags">講師 <b>李軍</b>　|　資深人才鑑別師　|　四度金鷹獎導演</p>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<div class="trust">
+  <div class="wrap">
+    <div><div class="n">10+</div><div class="l">年人才鑑別實戰經驗</div></div>
+    <div><div class="n">數十家</div><div class="l">企業人才鑑別服務</div></div>
+    <div><div class="n">4 度</div><div class="l">榮獲金鷹獎（影視最高獎）</div></div>
+    <div><div class="n">5 大</div><div class="l">跨域行業實戰（醫療・能源等）</div></div>
+  </div>
+</div>
+
+<!-- PAIN -->
+<section>
+  <div class="wrap center">
+    <div class="eyebrow">你是否也曾如此</div>
+    <h2 class="title">努力了很久，卻總覺得<span class="g">「使錯了力」</span>？</h2>
+    <p class="lead">真正的成功者，多半不是能力最強的人，而是把自己放在最擅長位置上的人。</p>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <div class="ic">01</div>
+        <h3>迷茫的你</h3>
+        <p>換了幾份工作都不順，常懷疑自己是不是「不行」。其實你可能只是站錯了位置——做對的事，才會發光。</p>
+      </div>
+      <div class="pain-card">
+        <div class="ic">02</div>
+        <h3>選科擇業的孩子</h3>
+        <p>升學選哪個科系？畢業做什麼工作？一個關鍵選擇，影響孩子未來十年。別讓他在分岔口走冤枉路。</p>
+      </div>
+      <div class="pain-card">
+        <div class="ic">03</div>
+        <h3>用錯人的老闆</h3>
+        <p>不懂識人，經營企業就像一場輸多贏少的賭博。誰是你的絕配副手？如何靠才幹互補組出核心班子？</p>
+      </div>
     </div>
   </div>
 </section>
@@ -410,42 +489,6 @@
       </div>
     </div>
     <p class="price-foot trailer-foot">※ 月訂閱 US$19.99／月、年訂閱 US$168／年（含才幹測評碼），於乾淨世界平台訂閱，可隨時管理或取消。</p>
-  </div>
-</section>
-
-<!-- TRUST -->
-<div class="trust">
-  <div class="wrap">
-    <div><div class="n">10+</div><div class="l">年人才鑑別實戰經驗</div></div>
-    <div><div class="n">數十家</div><div class="l">企業人才鑑別服務</div></div>
-    <div><div class="n">4 度</div><div class="l">榮獲金鷹獎（影視最高獎）</div></div>
-    <div><div class="n">5 大</div><div class="l">跨域行業實戰（醫療・能源等）</div></div>
-  </div>
-</div>
-
-<!-- PAIN -->
-<section>
-  <div class="wrap center">
-    <div class="eyebrow">你是否也曾如此</div>
-    <h2 class="title">努力了很久，卻總覺得<span class="g">「使錯了力」</span>？</h2>
-    <p class="lead">真正的成功者，多半不是能力最強的人，而是把自己放在最擅長位置上的人。</p>
-    <div class="pain-grid">
-      <div class="pain-card">
-        <div class="ic">01</div>
-        <h3>迷茫的你</h3>
-        <p>換了幾份工作都不順，常懷疑自己是不是「不行」。其實你可能只是站錯了位置——做對的事，才會發光。</p>
-      </div>
-      <div class="pain-card">
-        <div class="ic">02</div>
-        <h3>選科擇業的孩子</h3>
-        <p>升學選哪個科系？畢業做什麼工作？一個關鍵選擇，影響孩子未來十年。別讓他在分岔口走冤枉路。</p>
-      </div>
-      <div class="pain-card">
-        <div class="ic">03</div>
-        <h3>用錯人的老闆</h3>
-        <p>不懂識人，經營企業就像一場輸多贏少的賭博。誰是你的絕配副手？如何靠才幹互補組出核心班子？</p>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -571,6 +614,38 @@
   </div>
 </section>
 
+<!-- TESTIMONIALS -->
+<section>
+  <div class="wrap center">
+    <div class="eyebrow">學友親身分享</div>
+    <h2 class="title">他們學完之後，<span class="g">改變了什麼？</span></h2>
+    <p class="lead">不是廣告詞，是學友自己錄下的真實分享。</p>
+    <div class="vtes-grid">
+      <a class="vtes" href="https://www.ganjingworld.com/video/1hvmlino5lbs4maLoQpI6VOFI1r81c" target="_blank" rel="noopener">
+        <div class="vtes-thumb">
+          <img src="https://image5-us-west.cloudokyo.cloud/image/v3/1e/11/f3/1e11f391-952a-4dc9-95c1-298034e389cb/672.jpg" alt="學友蓓姨分享">
+          <div class="play"><span>▶</span></div>
+        </div>
+        <div class="vtes-body">
+          <p>「建議家長們盡早學習『發現天賦』這個課程，它一定會幫助到你和你的孩子。」</p>
+          <div class="who">學友 · 蓓姨<small>家長 · 親身分享</small></div>
+        </div>
+      </a>
+      <a class="vtes" href="https://www.ganjingworld.com/video/1i0smhag3t679RDPtW3NGCDJL1bb1c" target="_blank" rel="noopener">
+        <div class="vtes-thumb">
+          <img src="https://image1-us-west.cloudokyo.cloud/image/v3/7f/90/6f/7f906fb0-0cf0-44ed-9b3b-465fd7fea9e5/672.jpg" alt="學友方園分享">
+          <div class="play"><span>▶</span></div>
+        </div>
+        <div class="vtes-body">
+          <p>「發現天賦，不只幫你確立正確的職業方向，還能幫助你的孩子與整個家庭。」</p>
+          <div class="who">學友 · 方園<small>家庭 · 感同身受</small></div>
+        </div>
+      </a>
+    </div>
+    <p class="note">以上為學友在乾淨世界公開分享之真實見證，點擊即可觀看完整影片。個人經驗僅供參考，效果因人而異。</p>
+  </div>
+</section>
+
 <!-- TRACKS -->
 <section class="tracks" id="tracks">
   <div class="wrap">
@@ -603,38 +678,6 @@
         <a class="btn btn-out" href="#contact">企業諮詢洽談</a>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section>
-  <div class="wrap center">
-    <div class="eyebrow">學友親身分享</div>
-    <h2 class="title">他們學完之後，<span class="g">改變了什麼？</span></h2>
-    <p class="lead">不是廣告詞，是學友自己錄下的真實分享。</p>
-    <div class="vtes-grid">
-      <a class="vtes" href="https://www.ganjingworld.com/video/1hvmlino5lbs4maLoQpI6VOFI1r81c" target="_blank" rel="noopener">
-        <div class="vtes-thumb">
-          <img src="https://image5-us-west.cloudokyo.cloud/image/v3/1e/11/f3/1e11f391-952a-4dc9-95c1-298034e389cb/672.jpg" alt="學友蓓姨分享">
-          <div class="play"><span>▶</span></div>
-        </div>
-        <div class="vtes-body">
-          <p>「建議家長們盡早學習『發現天賦』這個課程，它一定會幫助到你和你的孩子。」</p>
-          <div class="who">學友 · 蓓姨<small>家長 · 親身分享</small></div>
-        </div>
-      </a>
-      <a class="vtes" href="https://www.ganjingworld.com/video/1i0smhag3t679RDPtW3NGCDJL1bb1c" target="_blank" rel="noopener">
-        <div class="vtes-thumb">
-          <img src="https://image1-us-west.cloudokyo.cloud/image/v3/7f/90/6f/7f906fb0-0cf0-44ed-9b3b-465fd7fea9e5/672.jpg" alt="學友方園分享">
-          <div class="play"><span>▶</span></div>
-        </div>
-        <div class="vtes-body">
-          <p>「發現天賦，不只幫你確立正確的職業方向，還能幫助你的孩子與整個家庭。」</p>
-          <div class="who">學友 · 方園<small>家庭 · 感同身受</small></div>
-        </div>
-      </a>
-    </div>
-    <p class="note">以上為學友在乾淨世界公開分享之真實見證，點擊即可觀看完整影片。個人經驗僅供參考，效果因人而異。</p>
   </div>
 </section>
 
