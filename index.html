@@ -181,6 +181,34 @@
   .case-lesson b{color:#fff}
   @media(max-width:820px){.case-grid{grid-template-columns:1fr}}
 
+  /* BUY CARD tiers */
+  .bc-tier{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:13px 14px;border:1px solid var(--line);border-radius:var(--radius);margin-bottom:10px}
+  .bc-tier.rec{border-color:var(--blue);background:rgba(47,96,152,0.06)}
+  .bt-name{font-family:"Noto Serif TC";font-weight:700;color:var(--ink);font-size:16px}
+  .bt-tag{display:inline-block;background:var(--navy);color:#fff;font-size:11px;font-weight:700;padding:1px 8px;border-radius:999px;margin-left:4px;font-family:"Noto Sans TC"}
+  .bt-desc{font-size:12.5px;color:var(--grey);margin-top:2px}
+  .bt-price{font-family:"Noto Serif TC";font-weight:900;color:var(--navy);font-size:22px;white-space:nowrap}
+  .bt-price small{font-size:12px;color:var(--grey);font-weight:500}
+
+  /* PLAYLIST */
+  .pl-grid{display:grid;grid-template-columns:1.45fr 1fr;gap:24px;margin-top:46px;align-items:start}
+  .pl-now{margin-top:12px;color:#eef2f7;font-size:15px;line-height:1.5}
+  .tag-free{display:inline-block;background:var(--blue);color:#fff;font-size:12px;font-weight:700;padding:2px 10px;border-radius:999px;margin-right:8px;font-family:"Noto Sans TC"}
+  .pl-list{background:var(--dark2);border:1px solid var(--line-d);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
+  .pl-head{display:flex;justify-content:space-between;align-items:center;padding:15px 18px;font-family:"Noto Serif TC";font-weight:700;color:#fff;font-size:16px;border-bottom:1px solid var(--line-d)}
+  .pl-head span{color:#9aa5b4;font-weight:400;font-size:13px}
+  .pl-item{display:flex;gap:12px;align-items:center;padding:13px 18px;border-bottom:1px solid var(--line-d);color:#c2cbd8;font-size:14.5px;transition:.15s;text-decoration:none}
+  a.pl-item:hover{background:rgba(255,255,255,0.05)}
+  .pl-no{color:#7e8aa0;font-weight:700;min-width:22px;font-family:"Noto Serif TC";text-align:center}
+  .pl-t{flex:1;line-height:1.45}
+  .pl-meta{display:block;font-size:12px;color:#7e8aa0;margin-top:2px}
+  .pl-ic{color:#7e8aa0;font-size:15px}
+  .pl-item.free{background:rgba(47,96,152,0.18)}
+  .pl-item.free .pl-t{color:#fff;font-weight:500}
+  .pl-item.free .pl-no,.pl-item.free .pl-ic{color:var(--blue-l)}
+  .pl-cta{margin:14px;text-align:center}
+  @media(max-width:860px){.pl-grid{grid-template-columns:1fr}}
+
   /* TRACKS (panel) */
   .tracks{background:var(--panel)}
   .track-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;margin-top:52px}
@@ -314,7 +342,7 @@
     <div class="head">
       <div class="eyebrow">課程預告</div>
       <h2>三分鐘，認識《<span class="g">發現天賦 成就人生</span>》</h2>
-      <p class="sub">左邊看預告，右邊直接訂閱——立刻開始看完整 7 堂課。</p>
+      <p class="sub">左邊看預告，右邊選方案——月訂閱入門，年訂閱再送才幹測評。</p>
     </div>
     <div class="tp-grid">
       <div class="tp-video">
@@ -325,16 +353,16 @@
         </div>
       </div>
       <aside class="buy-card">
-        <div class="ribbon">創始會員 · 鎖定現價</div>
-        <div class="amt">$19.99<small> 美元 / 月</small></div>
-        <p class="bc-sub">不到一週一頓飯的價格，認清自己一生的方向。</p>
-        <ul>
-          <li>7 堂完整課程，隨時回看</li>
-          <li>會員專屬直播，現場答疑</li>
-          <li>加入「發現天賦學友群」</li>
-          <li>直播精選測評報告點評</li>
-        </ul>
-        <a class="btn btn-solid" href="https://www.ganjingworld.com/channel/1hc7rhlp4nk1AedUtCDfBiqfs1v50c" target="_blank" rel="noopener">立即訂閱 · 直接購買</a>
+        <div class="ribbon">會員訂閱方案</div>
+        <div class="bc-tier">
+          <div><div class="bt-name">月訂閱</div><div class="bt-desc">完整 7 堂課 · 直播 · 學友群</div></div>
+          <div class="bt-price">$19.99<small>/月</small></div>
+        </div>
+        <div class="bc-tier rec">
+          <div><div class="bt-name">年訂閱 <span class="bt-tag">含測評</span></div><div class="bt-desc">加贈才幹測評碼 · 專業評估天賦</div></div>
+          <div class="bt-price">$168<small>/年</small></div>
+        </div>
+        <a class="btn btn-solid" href="https://www.ganjingworld.com/channel/1hc7rhlp4nk1AedUtCDfBiqfs1v50c" target="_blank" rel="noopener">立即訂閱 · 看完整課程</a>
         <p class="bc-assure">✓ 第一課免費　✓ 隨時可取消　✓ 無綁約</p>
       </aside>
     </div>
@@ -385,20 +413,29 @@
       <h2 class="title">《發現天賦 <span class="g">成就人生</span>》</h2>
       <p class="lead">一套源自企業實戰、為普通家庭降維的「識人之道」。共 7 堂課，第一課免費，加入會員看完整課程。</p>
     </div>
-    <div class="lessons">
-      <div class="lesson free">
-        <div class="no">01</div>
-        <div><h4>為什麼「認清自己」是一生最重要的事</h4><p>建立識人的底層認知，看見天賦的價值。</p><span class="tag">免費試看</span></div>
+    <div class="pl-grid">
+      <div class="pl-video">
+        <div class="video-frame">
+          <div class="ratio">
+            <iframe src="https://www.ganjingworld.com/embed/1hri75lenl85sUJDBzpfiu5Uz1r41c" title="發現天賦 成就人生 第一課（免費試看）" allow="encrypted-media; fullscreen" allowfullscreen></iframe>
+          </div>
+        </div>
+        <p class="pl-now"><span class="tag-free">免費試看</span>第一課 · 為什麼「認清自己」是一生最重要的事</p>
       </div>
-      <div class="lesson"><div class="no">02</div><div><h4>天賦是什麼：才幹的本質</h4><p>區分能力、興趣與天賦，找到真正的長板。</p></div></div>
-      <div class="lesson"><div class="no">03</div><div><h4>如何發現自己的天賦</h4><p>用可操作的方法，看清自己最擅長什麼。</p></div></div>
-      <div class="lesson"><div class="no">04</div><div><h4>揚長避短：把天賦變成成果</h4><p>把長板用對地方，避開短板的消耗。</p></div></div>
-      <div class="lesson"><div class="no">05</div><div><h4>識人之道：讀懂身邊的人</h4><p>理解伴侶、子女、夥伴，懂你才能包容你。</p></div></div>
-      <div class="lesson"><div class="no">06</div><div><h4>選對方向：升學與職涯的關鍵抉擇</h4><p>在人生分岔口做出更對的選擇。</p></div></div>
-      <div class="lesson"><div class="no">07</div><div><h4>才幹互補：組出你的核心班子</h4><p>個人到團隊，把對的人放在對的位置。</p></div></div>
-      <div class="lesson" style="border-style:dashed;background:transparent"><div class="no">＋</div><div><h4>會員專屬直播</h4><p>集中答疑、現場點評學員測評報告，加深實戰認知。</p></div></div>
+      <aside class="pl-list">
+        <div class="pl-head">課程章節 <span>7 堂課</span></div>
+        <div class="pl-item free"><span class="pl-no">01</span><span class="pl-t">為什麼「認清自己」是一生最重要的事<span class="pl-meta">正在播放 · 免費試看</span></span><span class="pl-ic">▶</span></div>
+        <a class="pl-item" href="#pricing"><span class="pl-no">02</span><span class="pl-t">天賦是什麼：才幹的本質<span class="pl-meta">訂閱解鎖</span></span><span class="pl-ic">&#128274;</span></a>
+        <a class="pl-item" href="#pricing"><span class="pl-no">03</span><span class="pl-t">如何發現自己的天賦<span class="pl-meta">訂閱解鎖</span></span><span class="pl-ic">&#128274;</span></a>
+        <a class="pl-item" href="#pricing"><span class="pl-no">04</span><span class="pl-t">揚長避短：把天賦變成成果<span class="pl-meta">訂閱解鎖</span></span><span class="pl-ic">&#128274;</span></a>
+        <a class="pl-item" href="#pricing"><span class="pl-no">05</span><span class="pl-t">識人之道：讀懂身邊的人<span class="pl-meta">訂閱解鎖</span></span><span class="pl-ic">&#128274;</span></a>
+        <a class="pl-item" href="#pricing"><span class="pl-no">06</span><span class="pl-t">選對方向：升學與職涯的關鍵抉擇<span class="pl-meta">訂閱解鎖</span></span><span class="pl-ic">&#128274;</span></a>
+        <a class="pl-item" href="#pricing"><span class="pl-no">07</span><span class="pl-t">才幹互補：組出你的核心班子<span class="pl-meta">訂閱解鎖</span></span><span class="pl-ic">&#128274;</span></a>
+        <a class="pl-item" href="#pricing"><span class="pl-no">＋</span><span class="pl-t">會員專屬直播 · 報告點評<span class="pl-meta">訂閱解鎖</span></span><span class="pl-ic">&#128274;</span></a>
+        <a class="btn btn-solid pl-cta" href="https://www.ganjingworld.com/channel/1hc7rhlp4nk1AedUtCDfBiqfs1v50c" target="_blank" rel="noopener">訂閱解鎖全部課程</a>
+      </aside>
     </div>
-    <p class="note" style="color:#9aa5b4">課程大綱為依官方介紹整理之示意版本，實際章節以頻道內容為準，可依老師意見調整。</p>
+    <p class="note" style="color:#9aa5b4">課程章節為示意排序，實際內容與順序以乾淨世界頻道為準；免費第一課可直接於上方試看。</p>
   </div>
 </section>
 
@@ -494,19 +531,19 @@
     <div class="center">
       <div class="eyebrow">專屬深度服務</div>
       <h2 class="title">看完課程，還想要一份<span class="g">「為我而做」</span>的答案？</h2>
-      <p class="lead">除了會員課程，李軍老師也提供一對一的專業測評與深度服務。</p>
+      <p class="lead">年訂閱會員可獲得才幹測評；企業則有專屬的諮詢式人才鑑別服務。</p>
     </div>
     <div class="track-grid">
       <div class="track">
         <h3>給家長與學生</h3>
         <div class="who">升學選科 · 畢業擇業</div>
         <ul>
-          <li>專業才幹測評，快速認清孩子的天賦與方向</li>
-          <li>專家面試，面對面深度評估</li>
-          <li>測評報告專家點評，給出職涯方向參考</li>
+          <li>年訂閱含才幹測評碼，專業評估天賦</li>
+          <li>快速認清孩子的長板與職業方向</li>
+          <li>測評報告專家點評，給出方向參考</li>
           <li>在高中、大學兩個關鍵抉擇點，少走彎路</li>
         </ul>
-        <a class="btn btn-out" href="#contact">預約測評 / 諮詢</a>
+        <a class="btn btn-out" href="#pricing">升級年訂閱 · 取得測評</a>
       </div>
       <div class="track">
         <h3>給企業老闆與 CEO</h3>
@@ -562,7 +599,7 @@
       <div class="eyebrow">選擇你的開始</div>
       <h2 class="title">從免費第一課，到<span class="g">專屬深度服務</span></h2>
       <p class="lead">先用最低門檻認識這套方法，再決定要走多深。</p>
-      <div class="founding-banner">🎖 <b>創始會員限時</b>：現在加入即鎖定 $19.99 現價，享學友群優先席位，課程持續上新、越早加入看越多。</div>
+      <div class="founding-banner"><b>怎麼選？</b>　先用 <b>月訂閱 $19.99</b> 入門看完整課程；想進一步取得<b>才幹測評碼、專業評估天賦</b>，升級 <b>年訂閱 $168</b> 即含。</div>
     </div>
     <div class="price-grid">
       <div class="plan">
@@ -576,36 +613,37 @@
         </ul>
         <a class="btn btn-out" href="https://www.ganjingworld.com/@%E6%9D%8E%E5%86%9B%E8%AE%B2%E5%A0%82" target="_blank" rel="noopener">免費看第一課</a>
       </div>
-      <div class="plan feat">
-        <span class="ribbon">最受歡迎</span>
-        <h3>會員訂閱</h3>
+      <div class="plan">
+        <h3>月訂閱</h3>
         <div class="amt">$19.99<small> / 月</small></div>
-        <p class="tagline">完整課程 + 直播 + 社群</p>
+        <p class="tagline">入門首選 · 完整課程</p>
         <ul>
           <li>7 堂完整課程，隨時回看</li>
           <li>會員專屬直播，現場答疑</li>
           <li>加入「發現天賦學友群」</li>
           <li>直播精選測評報告點評</li>
         </ul>
-        <a class="btn btn-solid" href="https://www.ganjingworld.com/channel/1hc7rhlp4nk1AedUtCDfBiqfs1v50c" target="_blank" rel="noopener">立即訂閱</a>
+        <a class="btn btn-solid" href="https://www.ganjingworld.com/channel/1hc7rhlp4nk1AedUtCDfBiqfs1v50c" target="_blank" rel="noopener">立即月訂閱</a>
         <p class="plan-assure">✓ 第一課免費　✓ 隨時可取消　✓ 無綁約</p>
       </div>
-      <div class="plan">
-        <h3>專業測評</h3>
-        <div class="amt">$128<span class="was">$168</span></div>
-        <p class="tagline">課程開播限時優惠</p>
+      <div class="plan feat">
+        <span class="ribbon">最超值 · 含才幹測評</span>
+        <h3>年訂閱</h3>
+        <div class="amt">$168<small> / 年</small></div>
+        <p class="tagline">想進一步認清天賦，升級這檔</p>
         <ul>
-          <li>才幹測評碼，專業評估天賦</li>
-          <li>適合升學擇業、認清方向</li>
-          <li>升級方案：測評 + 專家面試 $558</li>
-          <li>報告專家點評，方向更清晰</li>
+          <li>月訂閱的<strong>所有權益</strong></li>
+          <li><strong>加贈才幹測評碼</strong>，專業評估天賦</li>
+          <li>測評報告專家點評，方向更清晰</li>
+          <li>適合升學擇業、認清自己與孩子</li>
         </ul>
-        <a class="btn btn-out" href="#contact">了解測評</a>
+        <a class="btn btn-solid" href="https://www.ganjingworld.com/channel/1hc7rhlp4nk1AedUtCDfBiqfs1v50c" target="_blank" rel="noopener">升級年訂閱</a>
+        <p class="plan-assure">含才幹測評碼 · 一次到位</p>
       </div>
     </div>
     <p class="price-foot">
-      ※ 會員為每月 US$19.99 訂閱制，於乾淨世界平台訂閱，可隨時管理或取消。<br>
-      ※ 測評優惠為課程開播限時，名額有限；最終定價與權益以結帳頁面顯示為準。
+      ※ 月訂閱 US$19.99／月、年訂閱 US$168／年（含才幹測評碼），於乾淨世界平台訂閱，可隨時管理或取消。<br>
+      ※ 才幹測評碼於完成年訂閱後提供；最終定價與權益以乾淨世界結帳頁面顯示為準。
     </p>
   </div>
 </section>
@@ -642,8 +680,8 @@
       <details class="qa" open><summary>這個課程適合誰？</summary><div class="a">適合每一個想認清自己、選對方向的人：對職涯迷茫的個人、為升學擇業煩惱的家長與學生，以及需要識人用人的企業經營者。它也是幫助家庭彼此理解的一堂課。</div></details>
       <details class="qa"><summary>第一課真的免費嗎？</summary><div class="a">是的。《發現天賦 成就人生》第一課在乾淨世界頻道免費試看，其餘六堂課與會員專屬直播需訂閱會員（US$19.99/月）後觀看。</div></details>
       <details class="qa"><summary>會員費怎麼計算？可以取消嗎？</summary><div class="a">會員為每月 US$19.99 的訂閱制，於乾淨世界平台訂閱。你可以隨時在平台帳戶中管理或取消訂閱。</div></details>
-      <details class="qa"><summary>測評和面試是什麼？和課程有何不同？</summary><div class="a">課程幫你建立識人方法的認知；測評與面試則是一對一的專屬服務——透過才幹測評碼（$128 起）與專家面試（測評+面試 $558），針對個人給出更具體的天賦與方向參考。</div></details>
-      <details class="qa"><summary>測評怎麼付費？</summary><div class="a">可透過 PayPal 或 Zelle 付款至 Lhzsf2000@gmail.com（Zelle 戶名 Jing Wang）。付款時請註明購買產品、數量、測評人姓名並留下聯絡郵箱，我們會透過郵箱與你溝通後續安排。</div></details>
+      <details class="qa"><summary>才幹測評是什麼？怎麼取得？</summary><div class="a">課程幫你建立識人方法的認知；才幹測評碼則針對個人，專業評估你的天賦與職業方向。完成<strong>年訂閱（US$168／年）</strong>即包含才幹測評碼與報告專家點評，不需另外購買。</div></details>
+      <details class="qa"><summary>月訂閱和年訂閱差在哪？</summary><div class="a">月訂閱（US$19.99／月）可看 7 堂完整課程、會員專屬直播與學友群；年訂閱（US$168／年）包含月訂閱的所有權益，再加贈才幹測評碼與專業評估天賦，適合想更進一步認清自己與孩子的人。兩者都在乾淨世界平台訂閱、可隨時取消。</div></details>
       <details class="qa"><summary>測評能保證升學或就業結果嗎？</summary><div class="a">不能。測評與課程提供的是認清天賦的方法與職涯方向的專業參考，最終選擇與結果因人而異。我們協助你做出更有依據的決定，而非保證特定結果。</div></details>
     </div>
   </div>
@@ -657,7 +695,7 @@
     <a class="btn btn-solid" href="https://www.ganjingworld.com/channel/1hc7rhlp4nk1AedUtCDfBiqfs1v50c" target="_blank" rel="noopener">立即訂閱會員 · $19.99 / 月</a>
     <div class="contact">
       <div>📧 課程／測評洽詢：<b>Lhzsf2000@gmail.com</b></div>
-      <div>💳 付款：<b>PayPal / Zelle</b>（Lhzsf2000@gmail.com）</div>
+      <div>✦ 月訂閱 <b>$19.99</b>／年訂閱 <b>$168</b>（含測評）· 乾淨世界平台訂閱</div>
     </div>
   </div>
 </section>
