@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# Office 暫存鎖定檔
+~$*.docx
+~$*.xlsx
+~$*.pptx
+
+# 原始/重複素材（如需保留可移除下面兩行）
+ChatGPT Image *.png
+unnamed *.jpg
