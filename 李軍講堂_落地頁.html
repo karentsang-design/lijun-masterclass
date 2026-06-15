@@ -118,6 +118,11 @@
   .buy-card .bc-mini{text-align:center;font-size:12.5px;color:var(--grey-l);margin-top:10px}
   @media(max-width:820px){.trailer .tp-grid{grid-template-columns:1fr}}
 
+  /* TRAILER big video + below pricing */
+  .trailer-video{max-width:900px;margin:0 auto 6px}
+  .trailer-price{margin-top:34px}
+  .trailer-foot{color:var(--grey)}
+
   /* TRUST BAR */
   .trust{background:var(--dark);color:#fff;padding:36px 0}
   .trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center}
@@ -342,7 +347,7 @@
       <div class="hero-cta">
         <a class="btn btn-solid btn-lg" href="https://www.ganjingworld.com/channel/1hc7rhlp4nk1AedUtCDfBiqfs1v50c" target="_blank" rel="noopener">訂閱會員 · 看完整課程</a>
       </div>
-      <a class="hero-free" href="https://www.ganjingworld.com/@%E6%9D%8E%E5%86%9B%E8%AE%B2%E5%A0%82" target="_blank" rel="noopener">或先免費看第一課 →</a>
+      <a class="hero-free" href="#trailer">↓ 先免費看第一課（站內試看）</a>
       <p class="hero-assure"><span>✓ 第一課免費試看</span><span>✓ 月費制隨時可取消</span><span>✓ 無長期綁約</span></p>
       <p class="hero-tags">講師 <b>李軍</b>　|　資深人才鑑別師　|　四度金鷹獎導演</p>
     </div>
@@ -355,30 +360,56 @@
     <div class="head">
       <div class="eyebrow">課程預告</div>
       <h2>三分鐘，認識《<span class="g">發現天賦 成就人生</span>》</h2>
-      <p class="sub">左邊看預告，右邊選方案——月訂閱入門，年訂閱再送才幹測評。</p>
+      <p class="sub">看完預告，下方直接選方案——月訂閱入門，年訂閱再送才幹測評。</p>
     </div>
-    <div class="tp-grid">
-      <div class="tp-video">
-        <div class="video-frame">
-          <div class="ratio">
-            <iframe src="https://www.ganjingworld.com/embed/1hri75lenl85sUJDBzpfiu5Uz1r41c" title="發現天賦 成就人生 課程預告片" allow="encrypted-media; fullscreen" allowfullscreen></iframe>
-          </div>
+    <div class="trailer-video">
+      <div class="video-frame">
+        <div class="ratio">
+          <iframe id="trailer-iframe" data-src="https://www.ganjingworld.com/embed/1hri75lenl85sUJDBzpfiu5Uz1r41c" src="https://www.ganjingworld.com/embed/1hri75lenl85sUJDBzpfiu5Uz1r41c" title="發現天賦 成就人生 課程預告片" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>
         </div>
       </div>
-      <aside class="buy-card">
-        <div class="ribbon">會員訂閱方案</div>
-        <div class="bc-tier">
-          <div><div class="bt-name">月訂閱</div><div class="bt-desc">完整課程 · 直播 · 學友群</div></div>
-          <div class="bt-price">$19.99<small>/月</small></div>
-        </div>
-        <div class="bc-tier rec">
-          <div><div class="bt-name">年訂閱 <span class="bt-tag">含測評</span></div><div class="bt-desc">加贈才幹測評碼 · 專業評估天賦</div></div>
-          <div class="bt-price">$168<small>/年</small></div>
-        </div>
-        <a class="btn btn-solid" href="https://www.ganjingworld.com/channel/1hc7rhlp4nk1AedUtCDfBiqfs1v50c" target="_blank" rel="noopener">立即訂閱 · 看完整課程</a>
-        <p class="bc-assure">✓ 第一課免費　✓ 隨時可取消　✓ 無綁約</p>
-      </aside>
     </div>
+    <div class="price-grid trailer-price">
+      <div class="plan">
+        <h3>免費試看</h3>
+        <div class="amt">$0</div>
+        <p class="tagline">先看，再決定</p>
+        <ul>
+          <li>《發現天賦 成就人生》第一課</li>
+          <li>於上方影片直接試看</li>
+          <li>了解李軍的識人方法</li>
+        </ul>
+        <a class="btn btn-out" href="#trailer">↑ 立即免費試看</a>
+      </div>
+      <div class="plan">
+        <h3>月訂閱</h3>
+        <div class="amt">$19.99<small> / 月</small></div>
+        <p class="tagline">入門首選 · 完整課程</p>
+        <ul>
+          <li>完整影音課程，每週更新</li>
+          <li>會員專屬直播，現場答疑</li>
+          <li>加入「發現天賦學友群」</li>
+          <li>直播精選測評報告點評</li>
+        </ul>
+        <a class="btn btn-solid" href="https://www.ganjingworld.com/channel/1hc7rhlp4nk1AedUtCDfBiqfs1v50c" target="_blank" rel="noopener">立即月訂閱</a>
+        <p class="plan-assure">✓ 第一課免費　✓ 隨時可取消　✓ 無綁約</p>
+      </div>
+      <div class="plan feat">
+        <span class="ribbon">最超值 · 含才幹測評</span>
+        <h3>年訂閱</h3>
+        <div class="amt">$168<small> / 年</small></div>
+        <p class="tagline">想進一步認清天賦，升級這檔</p>
+        <ul>
+          <li>月訂閱的<strong>所有權益</strong></li>
+          <li><strong>加贈才幹測評碼</strong>，專業評估天賦</li>
+          <li>測評報告專家點評，方向更清晰</li>
+          <li>適合升學擇業、認清自己與孩子</li>
+        </ul>
+        <a class="btn btn-solid" href="https://www.ganjingworld.com/channel/1hc7rhlp4nk1AedUtCDfBiqfs1v50c" target="_blank" rel="noopener">升級年訂閱</a>
+        <p class="plan-assure">含才幹測評碼 · 一次到位</p>
+      </div>
+    </div>
+    <p class="price-foot trailer-foot">※ 月訂閱 US$19.99／月、年訂閱 US$168／年（含才幹測評碼），於乾淨世界平台訂閱，可隨時管理或取消。</p>
   </div>
 </section>
 
@@ -626,7 +657,7 @@
           <li>YouTube 課程精華與案例</li>
           <li>了解李軍的識人方法</li>
         </ul>
-        <a class="btn btn-out" href="https://www.ganjingworld.com/@%E6%9D%8E%E5%86%9B%E8%AE%B2%E5%A0%82" target="_blank" rel="noopener">免費看第一課</a>
+        <a class="btn btn-out" href="#trailer">↑ 立即免費試看</a>
       </div>
       <div class="plan">
         <h3>月訂閱</h3>
@@ -729,5 +760,23 @@
   </div>
 </footer>
 
+<script>
+(function(){
+  var f=document.getElementById('trailer-iframe');
+  if(!f||!('IntersectionObserver' in window))return;
+  var done=false;
+  var io=new IntersectionObserver(function(en){
+    en.forEach(function(e){
+      if(e.isIntersecting&&!done){
+        done=true;
+        var u=f.getAttribute('data-src');
+        f.src=u+(u.indexOf('?')>-1?'&':'?')+'autoplay=1';
+        io.disconnect();
+      }
+    });
+  },{threshold:0.55});
+  io.observe(f);
+})();
+</script>
 </body>
 </html>
